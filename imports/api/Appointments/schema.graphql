@@ -1,0 +1,76 @@
+enum AppointmentsType {
+  Visit
+  Surgery
+  Other
+}
+
+enum AppointmentStatus {
+  Pending
+  Arrived
+  Completed
+  Scheduled
+  Confirmed
+  Cancelled
+  Did_not_arrive
+  Rescheduled
+}
+
+type Appointment {
+  _id: ID
+  appointmentType: AppointmentsType
+  status: AppointmentStatus
+  start: Date!
+  end: Date!
+  timezone: String!
+  comment: String
+  referralId: String
+  careplanId: String
+  subject: String!
+  patientId: String
+  patient: Patient
+  participants: [String]!
+  cancelReason: String
+  locationId: String
+  location: Location!
+  encounterType: String
+  encounterSubtypeId: String
+  createdAt: Date!
+  createdBy: String
+}
+
+extend type Query {
+  appointments(filter: String): [Appointment]
+  appointment(_id: ID): Appointment
+}
+
+extend type Mutation {
+  createAppointment(appointment: AppointmentInput!): Appointment
+  cancelAppointment(appointment: AppointmentInputCancel!): Boolean
+}
+
+input AppointmentInputCancel {
+  _id: String
+  cancelReason: String
+  comment: String
+}
+
+input AppointmentInput {
+  _id: ID
+  appointmentType: AppointmentsType
+  status: AppointmentStatus
+  start: Date!
+  end: Date!
+  timezone: String #!
+  comment: String
+  referralId: String
+  careplanId: String
+  subject: String #!
+  patientId: String
+  participants: [String]!
+  cancelReason: String
+  locationId: String
+  encounterType: String
+  encounterSubtypeId: String
+  createdAt: Date!
+  createdBy: String
+}

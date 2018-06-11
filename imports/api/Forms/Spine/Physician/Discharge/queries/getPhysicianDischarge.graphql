@@ -1,0 +1,17 @@
+query PhysicianDischarge($_id: ID) {
+  physicianDischarge(_id: $_id) {
+    _id
+    DateDischarge
+    DischargedTo
+    AllogenicBloodProducts
+    DischargeAdverseEvent
+    AdmittedToICU
+    StepDownBed
+    stay_length
+    adverse_event {
+      type
+      grade
+      date
+    }
+  }
+}

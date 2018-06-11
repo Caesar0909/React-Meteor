@@ -1,0 +1,5 @@
+mutation updateQuestionnaire($questionnaire: QuestionnaireInput!) {
+    updateQuestionnaire(questionnaire: $questionnaire) {
+      _id
+    }
+  }

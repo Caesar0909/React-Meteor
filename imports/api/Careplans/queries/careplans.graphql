@@ -1,0 +1,15 @@
+query careplansByPatient($patientId: ID!) {
+  careplansByPatient(patientId: $patientId){
+    _id
+    status
+    primaryPhysican
+    createdAt
+    isActive
+    questionnaires {
+      _id
+      status
+      name
+      dueDate
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mutation createAppointment($appointment: AppointmentInput!) {
+  createAppointment(appointment: $appointment) {
+    _id
+  }
+}

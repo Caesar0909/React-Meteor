@@ -1,0 +1,6 @@
+mutation createPhysicianPre12WkAE($physicianPre12WkAE: PhysicianPre12WkAEInput!) {
+  createPhysicianPre12WkAE(physicianPre12WkAE: $physicianPre12WkAE) {
+    _id
+  }
+}
+

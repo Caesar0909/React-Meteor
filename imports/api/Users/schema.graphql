@@ -1,0 +1,17 @@
+type Name {
+  first: String
+  last: String
+}
+type Profile {
+  name: Name
+}
+
+type User {
+  _id: String
+  profile: Profile
+  roles: [String]
+}
+
+extend type Query {
+  physicians: [User]
+}

@@ -1,0 +1,12 @@
+query Admissions($filter: String!) {
+  admissions(filter: $filter) {
+    _id
+    start
+    end
+    isActive
+    patient {
+      _id
+      firstName
+    }
+  }
+}

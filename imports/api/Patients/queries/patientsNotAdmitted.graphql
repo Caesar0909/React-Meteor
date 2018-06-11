@@ -1,0 +1,9 @@
+query patientsNotAdmitted {
+  patientsNotAdmitted {
+    _id
+    firstName
+    lastName
+    email
+    isActive
+  }
+}

@@ -1,0 +1,3 @@
+mutation deletePhysicianPre12WkAE($_id: ID) {
+  deletePhysicianPre12WkAE(_id: $_id)
+}

@@ -1,0 +1,53 @@
+type UserIdentifier {
+  id: ID!
+  name: String
+}
+
+type Log {
+  admittedTo: String
+  dateOfAdmission: Date
+  dischargedTo: String
+  dischargedBy: String
+  dischargedAt: Date
+  length_of_stay: Int
+}
+
+type Admission {
+  _id: ID
+  patient: Patient
+  patientId: String
+  location: Location
+  locationId: String
+  start: Date!
+  end: Date
+  partOfCareplan: String
+  isReadmission: Boolean
+  isActive: Boolean!
+  createdAt: Date!
+  createdBy: String!
+}
+
+extend type Query {
+  admissions(filter: String): [Admission]
+  admission(_id: ID): Admission
+}
+
+extend type Mutation {
+  createAdmission(admission: AdmissionInput): Admission
+  updateAdmission(_id: ID, input: AdmissionInput): Admission
+  dischargeAdmission(admission: AdmissionInput!): Admission
+}
+
+input AdmissionInput {
+  _id: ID
+  start: Date!
+  end: Date
+  patientId: String!
+  appointmentId: String
+  locationId: String!
+  partOfCareplan: String
+  isReadmission: Boolean
+  isActive: Boolean!
+  createdAt: Date!
+  createdBy: String!
+}

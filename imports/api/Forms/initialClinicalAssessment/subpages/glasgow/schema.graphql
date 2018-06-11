@@ -1,0 +1,14 @@
+# Glasgow is part of ICA 
+type Glasgow {
+  eye: Int
+  motor: Int
+  verbal: Int
+  score: Int
+}
+
+input GlasgowInput {
+  eye: Int
+  motor: Int
+  verbal: Int
+  score: Int
+}

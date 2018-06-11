@@ -1,0 +1,6 @@
+query Questionnaires {
+  questionnairesDueToday {
+    _id
+    type
+  }
+}

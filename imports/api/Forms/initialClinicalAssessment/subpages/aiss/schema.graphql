@@ -1,0 +1,21 @@
+type AISS {
+	required: Boolean,
+	score: Int,
+	head: Int,
+	face: Int,
+	chest: Int,
+	abdomen: Int,
+	extremity: Int,
+	external: Int,
+}
+
+input AISSInput {
+	required: Boolean,
+	score: Int,
+	head: Int,
+	face: Int,
+	chest: Int,
+	abdomen: Int,
+	extremity: Int,
+	external: Int,	
+}

@@ -1,0 +1,10 @@
+type Mechanism {
+	value: Int,
+	energy: Int,
+}
+
+input MechanismInput {
+	value: Int,
+	energy: Int,
+}
+

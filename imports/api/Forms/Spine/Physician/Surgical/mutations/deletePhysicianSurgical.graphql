@@ -1,0 +1,3 @@
+mutation deletePhysicianSurgical($_id: ID) {
+  deletePhysicianSurgical(_id: $_id)
+}

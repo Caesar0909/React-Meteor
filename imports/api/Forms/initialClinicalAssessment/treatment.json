@@ -1,0 +1,77 @@
+{
+  "NoFurtherTreatmentRequired": {
+    "label": "No further treatment required",
+    "value": "0",
+    "treatmentOptions": [
+      {
+        "label": "No further treatment required",
+        "value": "NoFurtherTreatmentRequired"
+      }
+    ]
+  },
+  "FollowUpRequiredOnly": {
+    "label": "Follow-up required only",
+    "value": "1",
+    "treatmentOptions": [
+      {
+        "label": "Further follow-up required",
+        "value": "FurtherFollowUpRequired"
+      },
+      {
+        "label": "Admit to hospital and follow-up required",
+        "name": "AdmitToHospitalAndFollowUpRequired"
+      }
+    ]
+  },
+  "SurgeryAndFollowUp": {
+    "label": "Surgery and follow-up",
+    "value": "2",
+    "treatmentOptions": [
+      {
+        "label": "Surgery planned / required",
+        "value": "SurgeryPlannedRequired"
+      }
+    ]
+  },
+  "CannotAssess": {
+    "label": "Cannot assess / confirmation needed / To be determined",
+    "value": "3",
+    "treatmentOptions": [
+      {
+        "label": "Admit directly as most responsible service",
+        "value": "AdmitDirectlyAsMostResponsibleService"
+      },
+      {
+        "label": "See in consultant outpatient clinic",
+        "value": "SeeInConsultantOutpatientClinic"
+      },
+      {
+        "label": "See as in-patient consult",
+        "value": "SeeAsInPatientConsult"
+      },
+      {
+        "label": "Send to emergency room",
+        "value": "SendToEmergencyRoom"
+      },
+      {
+        "label":
+          "Continue to follow as inpatient, disposition to be determined",
+        "value": "ContinueToFollowAsInpatientDispositionToBeDetermined"
+      },
+      {
+        "label": "Outpatient surgery planned / required",
+        "value": "OutpatientSurgeryPlannedRequired"
+      }
+    ]
+  },
+  "ReferPatientToAnotherProvider": {
+    "label": "Refer patient to another provider",
+    "value": "4",
+    "treatmentOptions": [
+      {
+        "label": "Refer to triage clinic",
+        "value": "ReferToTriageClinic"
+      }
+    ]
+  }
+}

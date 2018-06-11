@@ -1,0 +1,9 @@
+query patientSearchQuery($filter: String!) {
+  patients(filter: $filter) {
+    _id
+    firstName
+    lastName
+    email
+    isActive
+  }
+}

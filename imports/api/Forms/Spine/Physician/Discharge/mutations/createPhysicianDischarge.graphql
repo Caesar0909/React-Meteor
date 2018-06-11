@@ -1,0 +1,6 @@
+mutation createPhysicianDischarge($physicianDischarge: PhysicianDischargeInput!) {
+  createPhysicianDischarge(physicianDischarge: $physicianDischarge) {
+    _id
+  }
+}
+

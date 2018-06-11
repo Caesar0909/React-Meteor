@@ -1,0 +1,29 @@
+type PhysicianGeneralAssessment {
+  _id: ID
+  DiagnosisChanged: Boolean
+  TreatmentChanged: Boolean
+  AdverseEventPostDischarge: Boolean
+  TreatmentOption: String
+  adverse_event: [AdverseEvent]
+}
+
+extend type Query {
+  physicianGeneralAssessments(filter: String): [PhysicianGeneralAssessment]
+  physicianGeneralAssessment(_id: ID): PhysicianGeneralAssessment
+}
+
+extend type Mutation {
+  createPhysicianGeneralAssessment(
+    physicianGeneralAssessment: PhysicianGeneralAssessmentInput!
+  ): PhysicianGeneralAssessment
+  deletePhysicianGeneralAssessment(_id: ID): Boolean
+}
+
+input PhysicianGeneralAssessmentInput {
+  _id: ID
+  DiagnosisChanged: Boolean
+  TreatmentChanged: Boolean
+  AdverseEventPostDischarge: Boolean
+  TreatmentOption: String
+  adverse_event: [AdverseEventInput]
+}

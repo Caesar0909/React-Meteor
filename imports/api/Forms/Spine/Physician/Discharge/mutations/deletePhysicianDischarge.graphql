@@ -1,0 +1,3 @@
+mutation deletePhysicianDischarge($_id: ID) {
+  deletePhysicianDischarge(_id: $_id)
+}

@@ -1,0 +1,3 @@
+mutation deletePhysician12MonthFollowUp($_id: ID) {
+  deletePhysician12MonthFollowUp(_id: $_id)
+}

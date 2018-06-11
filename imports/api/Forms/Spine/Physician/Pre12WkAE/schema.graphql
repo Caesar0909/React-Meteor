@@ -1,0 +1,29 @@
+
+type PhysicianPre12WkAE {
+ _id: ID
+DateOfFollowUp: String
+ae12wk_ae: Boolean
+TreatmentChanged: String
+TreatmentOption: String
+adverse_event: [String]
+}
+
+extend type Query {
+  physicianPre12WkAEs(filter: String): [PhysicianPre12WkAE]
+  physicianPre12WkAE(_id: ID): PhysicianPre12WkAE
+}
+
+extend type Mutation {
+  createPhysicianPre12WkAE(physicianPre12WkAE: PhysicianPre12WkAEInput!): PhysicianPre12WkAE
+  deletePre12WksAE(_id: ID): Boolean
+}
+
+
+input PhysicianPre12WkAEInput {
+ _id: ID
+DateOfFollowUp: String
+ae12wk_ae: Boolean
+TreatmentChanged: String
+TreatmentOption: String
+adverse_event: [String]
+}

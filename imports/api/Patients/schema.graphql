@@ -1,0 +1,64 @@
+scalar Date
+
+enum Gender {
+  M
+  F
+  O
+}
+
+type Identifier {
+  type: String!
+  value: String!
+}
+
+type Patient {
+  _id: ID
+  firstName: String!
+  middleNames: String
+  lastName: String!
+  email: String
+  DOB: Date
+  csorn: String
+  gender: Gender!
+  identifierPHN: String
+  identifierMRN: String
+  identifierOther: String
+  contacts: [String!]
+  isActive: Boolean!
+  createdAt: Date!
+  createdBy: String
+}
+
+type Query {
+  patients(filter: String): [Patient]
+  patient(_id: ID): Patient
+  patientsNotAdmitted: [Patient]
+}
+
+type Mutation {
+  createPatient(patient: PatientInput!): Patient
+  deletePatient(_id: ID): Boolean
+  archiveUnarchive(patient: PatientInput!): Patient
+}
+
+input IdentifierInput {
+  type: String!
+  value: String!
+}
+
+input PatientInput {
+  _id: ID
+  firstName: String!
+  lastName: String!
+  middleNames: String
+  email: String
+  DOB: Date
+  csorn: String
+  identifierPHN: String
+  identifierMRN: String
+  identifierOther: String
+  gender: Gender!
+  isActive: Boolean!
+  createdAt: Date!
+  createdBy: String
+}

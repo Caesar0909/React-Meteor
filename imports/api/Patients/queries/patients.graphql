@@ -1,0 +1,9 @@
+query Patients {
+  patients {
+    _id
+    firstName
+    lastName
+    email
+    isActive
+  }
+}

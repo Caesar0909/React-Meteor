@@ -1,0 +1,27 @@
+type Physician24MonthFollowUp {
+ _id: ID
+DiagnosisChanged: Boolean
+TreatmentChanged: Boolean
+AdverseEventPostDischarge: Boolean
+TreatmentOption: String
+adverse_event: [AdverseEvent]
+}
+
+extend type Query {
+  physician24MonthFollowUps(filter: String): [Physician24MonthFollowUp]
+  physician24MonthFollowUp(_id: ID): Physician24MonthFollowUp
+}
+
+extend type Mutation {
+  createPhysician24MonthFollowUp(physician24MonthFollowUp: Physician24MonthFollowUpInput!): Physician24MonthFollowUp
+  deletePhysician24MonthFollowUp(_id: ID): Boolean
+}
+
+input Physician24MonthFollowUpInput {
+  _id: ID
+  DiagnosisChanged: Boolean
+  TreatmentChanged: Boolean
+  AdverseEventPostDischarge: Boolean
+  TreatmentOption: String
+  adverse_event: [AdverseEventInput]
+}

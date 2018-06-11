@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Physician3MonthFollowUp",
+    "treatmentTypes": ["FollowUpRequiredOnly", "SurgeryAndFollowUp"]
+  },
+  {
+    "name": "Physician12MonthFollowUp",
+    "treatmentTypes": ["FollowUpRequiredOnly", "SurgeryAndFollowUp"]
+  },
+  {
+    "name": "Physician24MonthFollowUp",
+    "treatmentTypes": ["FollowUpRequiredOnly", "SurgeryAndFollowUp"]
+  },
+  {
+    "name": "PhysicianPre12WkAE",
+    "treatmentTypes": ["SurgeryAndFollowUp"]
+  },
+  {
+    "name": "PhysicianSurgical",
+    "treatmentTypes": ["SurgeryAndFollowUp"]
+  },
+  {
+    "name": "PhysicianDischarge",
+    "treatmentTypes": ["SurgeryAndFollowUp"]
+  },
+  {
+    "name": "PhysicianGeneralAssessment",
+    "treatmentTypes": ["CannotAssess"]
+  }
+]

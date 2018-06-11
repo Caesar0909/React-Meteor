@@ -1,0 +1,5 @@
+mutation createPatient($patient: PatientInput!) {
+  createPatient(patient: $patient) {
+    _id
+  }
+}

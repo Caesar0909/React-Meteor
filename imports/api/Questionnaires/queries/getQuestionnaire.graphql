@@ -1,0 +1,30 @@
+query Questionnaire($id: ID!) {
+  questionnaire(_id: $id) {
+    _id
+    type
+    owner
+    dueDate
+    isActive
+    assignedTo
+    patientId
+    createdAt
+    formId
+    patient {
+      _id
+      firstName
+      DOB
+    }
+    careplanId
+    careplan {
+      status
+      primaryPhysican
+    }
+    initialInfo {
+      PP1
+      spineUpperClinical
+      spineLowerClinical
+      CA3
+      treatmentType
+    }
+  }
+}

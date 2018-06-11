@@ -1,0 +1,24 @@
+{
+  "public": {},
+  "private": {
+    "MAIL_URL": "smtps://postmaster@sandboxa5eca89ec4a04397a9d4439b6ca15eb0.mailgun.org:b507ce178bfc906ac2abe218866e0db5@smtp.mailgun.org:587",
+    "synchroniseDB": "mongodb://db:kzBz3KyEMauV4poU@followup-shard-00-00-yvqak.mongodb.net:27017,followup-shard-00-01-yvqak.mongodb.net:27017,followup-shard-00-02-yvqak.mongodb.net:27017/followup?ssl=true&replicaSet=followup-shard-0&authSource=admin&retryWrites=true",
+    "OAuth": {
+      "facebook": {
+        "appId": "",
+        "secret": "",
+        "loginStyle": "popup"
+      },
+      "google": {
+        "clientId": "",
+        "secret": "",
+        "loginStyle": "popup"
+      },
+      "github": {
+        "clientId": "",
+        "secret": "",
+        "loginStyle": "popup"
+      }
+    }
+  }
+}

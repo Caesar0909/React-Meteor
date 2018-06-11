@@ -1,0 +1,100 @@
+type SpineASIAForm {
+Cervical: [String]
+Thoracic: [String]
+Lumbar: [String]
+Sacral: [String]
+MaxMotorRight
+MaxMotorLeft
+MaxMotor
+MaxTouchRight
+MaxTouchLeft
+MaxTouch
+MaxPinRight
+MaxPinLeft
+MaxPin
+UER
+UEL
+UEMS
+LER
+LEL
+LEMS
+LTL
+LT
+PPR
+PPL
+PPT
+SensoryRightNeuro
+SensoryLeftNeuro
+MotorLeftNeuro
+MotorRightNeuro
+SensoryRightZone
+SensoryLeftZone
+MotorLeftZone
+MotorRightZone
+NeurologicalLevelNeuro
+CompleteInjury
+DeepAnalPressure
+VoluntaryAnalContraction
+ZoneOfPartialSensoryRight
+ZoneOfPartialSensoryLeft
+ZoneOfPartialMotorRight
+ZoneOfPartialMotorLeft
+ASIAGrade
+InjuryLevel
+}
+
+
+extend type Query {
+  spineASIAForms(filter: String): [SpineASIAForm]
+  spineASIAForm(_id: ID): SpineASIAForm
+}
+
+extend type Mutation {
+  createSpineASIAForm(initialClinicalAssessment: SpineASIAForm!): InitialClinicalAssessment
+  deleteSpineASIAForm(_id: ID): Boolean
+}
+
+input InitialClinicalAssessmentInput {
+Cervical: [String]
+Thoracic: [String]
+Lumbar: [String]
+Sacral: [String]
+MaxMotorRight
+MaxMotorLeft
+MaxMotor
+MaxTouchRight
+MaxTouchLeft
+MaxTouch
+MaxPinRight
+MaxPinLeft
+MaxPin
+UER
+UEL
+UEMS
+LER
+LEL
+LEMS
+LTL
+LT
+PPR
+PPL
+PPT
+SensoryRightNeuro
+SensoryLeftNeuro
+MotorLeftNeuro
+MotorRightNeuro
+SensoryRightZone
+SensoryLeftZone
+MotorLeftZone
+MotorRightZone
+NeurologicalLevelNeuro
+CompleteInjury
+DeepAnalPressure
+VoluntaryAnalContraction
+ZoneOfPartialSensoryRight
+ZoneOfPartialSensoryLeft
+ZoneOfPartialMotorRight
+ZoneOfPartialMotorLeft
+ASIAGrade
+InjuryLevel
+}

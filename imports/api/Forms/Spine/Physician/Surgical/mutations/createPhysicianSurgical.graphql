@@ -1,0 +1,6 @@
+mutation createPhysicianSurgical($physicianSurgical: PhysicianSurgicalInput!) {
+  createPhysicianSurgical(physicianSurgical: $physicianSurgical) {
+    _id
+  }
+}
+

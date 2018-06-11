@@ -1,0 +1,11 @@
+type Location {
+  _id: String,
+  type: String,
+  name: String,
+  code: String,
+  partOf: String,
+}
+
+extend type Query {
+  locations: [Location]
+}

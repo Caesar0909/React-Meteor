@@ -1,0 +1,9 @@
+mutation createPhysicianGeneralAssessment(
+  $physicianGeneralAssessment: PhysicianGeneralAssessmentInput!
+) {
+  createPhysicianGeneralAssessment(
+    physicianGeneralAssessment: $physicianGeneralAssessment
+  ) {
+    _id
+  }
+}

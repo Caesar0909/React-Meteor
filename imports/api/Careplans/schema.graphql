@@ -1,0 +1,42 @@
+enum Status {
+  Inactive
+  Active
+  New
+  Not_started
+  Planned
+  Inprogress
+  In_progress
+  Overdue
+  Completed
+}
+
+type Careplan {
+  _id: ID
+  status: Status!
+  primaryPhysican: String
+  patientId: String
+  patient: Patient
+  isActive: Boolean!
+  createdAt: Date!
+  createdBy: String
+  questionnaires: [Questionnaire]
+}
+
+extend type Query {
+  careplan(_id: ID): Careplan
+  careplansByPatient(patientId: ID!): [Careplan]
+  careplansFiltered(filter: String): [Careplan]
+}
+
+extend type Mutation {
+  createCareplan(careplan: CareplanInput!): Careplan
+}
+
+input CareplanInput {
+  _id: ID
+  status: Status!
+  primaryPhysican: String
+  isActive: Boolean!
+  createdAt: Date!
+  createdBy: String
+}

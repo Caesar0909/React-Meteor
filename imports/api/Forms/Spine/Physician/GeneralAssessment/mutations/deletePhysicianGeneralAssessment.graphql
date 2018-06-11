@@ -1,0 +1,3 @@
+mutation deletePhysicianGeneralAssessment($_id: ID) {
+  deletePhysicianGeneralAssessment(_id: $_id)
+}

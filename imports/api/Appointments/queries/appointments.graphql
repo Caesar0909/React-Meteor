@@ -1,0 +1,18 @@
+query Appointment {
+  appointments {
+    _id
+    status
+    start
+    end
+    comment
+    referralId
+    careplanId
+    patient {
+      _id
+      firstName
+    }
+    participants
+    cancelReason
+    locationId
+  }
+}

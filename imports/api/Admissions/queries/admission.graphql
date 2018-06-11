@@ -1,0 +1,25 @@
+query Admission($id: ID!) {
+  admission(_id: $id){
+    _id
+    start
+    end    
+    isActive
+    createdAt
+    createdBy
+    locationId
+    location {
+      _id
+      name
+    }
+    patientId
+    patient {
+      _id
+      firstName
+      lastName
+      email
+      gender
+      isActive
+      createdAt
+    }
+  }
+}

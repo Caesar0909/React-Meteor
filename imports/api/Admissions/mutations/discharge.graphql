@@ -1,0 +1,5 @@
+mutation dischargeAdmission($admission: AdmissionInput!) {
+    dischargeAdmission(admission: $admission){
+      _id
+    }
+  }

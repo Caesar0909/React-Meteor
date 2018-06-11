@@ -1,0 +1,5 @@
+mutation archiveUnarchive($patient: PatientInput!) {
+    archiveUnarchive(patient: $patient){
+      _id
+    }
+  }

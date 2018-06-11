@@ -1,0 +1,12 @@
+query Physicians {
+  physicians {
+    _id
+    profile {
+      name {
+        first
+        last
+      }
+    }
+    roles
+  }
+}

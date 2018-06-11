@@ -1,0 +1,5 @@
+mutation createCareplan($careplan: CareplanInput!) {
+  createCareplan(careplan: $careplan) {
+    _id
+  }
+}

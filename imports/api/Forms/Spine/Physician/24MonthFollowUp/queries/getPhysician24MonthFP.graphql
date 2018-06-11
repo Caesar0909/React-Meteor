@@ -1,0 +1,14 @@
+query Physicia24MonthFollowUp($_id: ID) {
+  physician24MonthFollowUp(_id: $_id) {
+    _id
+    DiagnosisChanged
+    TreatmentChanged
+    AdverseEventPostDischarge
+    TreatmentOption
+    adverse_event {
+      type
+      grade
+      date
+    }
+  }
+}

@@ -1,0 +1,14 @@
+query PhysicianGeneralAssessment($_id: ID) {
+  physicianGeneralAssessment(_id: $_id) {
+    _id
+    DiagnosisChanged
+    TreatmentChanged
+    AdverseEventPostDischarge
+    TreatmentOption
+    adverse_event {
+      type
+      grade
+      date
+    }
+  }
+}

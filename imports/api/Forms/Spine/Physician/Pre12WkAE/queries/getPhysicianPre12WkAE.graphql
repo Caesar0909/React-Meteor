@@ -1,0 +1,6 @@
+query PhysicianPre12WkAE($_id: ID) {
+  physicianPre12WkAE(_id: $_id) {
+    _id
+    ae12wk_ae
+  }
+}

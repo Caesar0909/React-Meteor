@@ -1,0 +1,35 @@
+type PhysicianDischarge {
+  _id: ID
+  DateDischarge: Date
+  DischargedTo: String
+  AllogenicBloodProducts: Boolean
+  DischargeAdverseEvent: Boolean
+  AdmittedToICU: Boolean
+  StepDownBed: Boolean
+  stay_length: String
+  adverse_event: [AdverseEvent]
+}
+
+extend type Query {
+  physicianDischarges(filter: String): [PhysicianDischarge]
+  physicianDischarge(_id: ID): PhysicianDischarge
+}
+
+extend type Mutation {
+  createPhysicianDischarge(
+    physicianDischarge: PhysicianDischargeInput!
+  ): PhysicianDischarge
+  deletePhysicianDischarge(_id: ID): Boolean
+}
+
+input PhysicianDischargeInput {
+  _id: ID
+  DateDischarge: Date
+  DischargedTo: String
+  AllogenicBloodProducts: Boolean
+  DischargeAdverseEvent: Boolean
+  AdmittedToICU: Boolean
+  StepDownBed: Boolean
+  stay_length: String
+  adverse_event: [AdverseEventInput]
+}

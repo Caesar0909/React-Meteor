@@ -1,0 +1,17 @@
+query Questionnaires($filter: String!) {
+  questionnaires(filter: $filter) {
+    _id
+    type
+    owner
+    dueDate    
+    isActive
+    patient {
+      _id
+      firstName
+    }
+    careplan {
+      status
+      primaryPhysican
+    }
+  }
+}

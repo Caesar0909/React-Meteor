@@ -1,0 +1,41 @@
+type AdverseEvent {
+  type: String
+  grade: String
+  date: Date
+}
+
+type Physician3MonthFollowUp {
+  _id: ID
+  DiagnosisChanged: Boolean
+  TreatmentChanged: Boolean
+  AdverseEventPostDischarge: Boolean
+  TreatmentOption: String
+  adverse_event: [AdverseEvent]
+}
+
+extend type Query {
+  physician3MonthFollowUps(filter: String): [Physician3MonthFollowUp]
+  physician3MonthFollowUp(_id: ID): Physician3MonthFollowUp
+}
+
+extend type Mutation {
+  createPhysician3MonthFollowUp(
+    physician3MonthFollowUp: Physician3MonthFollowUpInput!
+  ): Physician3MonthFollowUp
+  deletePhysician3MonthFollowUp(_id: ID): Boolean
+}
+
+input AdverseEventInput {
+  type: String
+  grade: String
+  date: Date
+}
+
+input Physician3MonthFollowUpInput {
+  _id: ID
+  DiagnosisChanged: Boolean
+  TreatmentChanged: Boolean
+  AdverseEventPostDischarge: Boolean
+  TreatmentOption: String
+  adverse_event: [AdverseEventInput]
+}

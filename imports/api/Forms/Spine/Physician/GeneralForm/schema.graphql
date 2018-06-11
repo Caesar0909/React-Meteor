@@ -1,0 +1,30 @@
+
+type SpineGeneralVisitForm {
+ _id: ID
+DiagnosisChanged: String
+TreatmentChanged: Boolean
+AdverseEventPostDischarge: Boolean
+TreatmentOption: String
+adverse_event: [String]
+#need to add adverse_event.other.details
+}
+
+extend type Query {
+  spineGeneralVisitForms(filter: String): [SpineGeneralVisitForm]
+  SpineGeneralVisitForm(_id: ID): SpineGeneralVisitForm
+}
+
+extend type Mutation {
+  createSpineGeneralVisitForm(spineGeneralVisitForm: SpineGeneralVisitFormInput!): SpineGeneralVisitForm
+  deleteSpineGeneralVisitForm(_id: ID): Boolean
+}
+
+
+type SpineGeneralVisitForm {
+ _id: ID
+DiagnosisChanged: String
+TreatmentChanged: Boolean
+AdverseEventPostDischarge: Boolean
+TreatmentOption: String
+adverse_event: [String]
+}

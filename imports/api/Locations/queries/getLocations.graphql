@@ -1,0 +1,8 @@
+query GetLocations {
+  locations {
+    _id
+    name
+    code
+    partOf
+  }
+}

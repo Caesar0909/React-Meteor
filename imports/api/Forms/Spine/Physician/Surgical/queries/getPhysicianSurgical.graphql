@@ -1,0 +1,57 @@
+query PhysicianSurgical($_id: ID) {
+  physicianSurgical(_id: $_id) {
+		_id
+		DateInitialReferral
+		surg_proc_asascore
+		surg_proc_surg_dt
+		surg_proc_optimestart
+		surg_proc_optimeend
+		surg_proc_estimatedbloodloss
+		surg_proc_injury_dt
+		surg_proc_decomp_dt
+		surg_proc_vertebral
+		vertebral
+		vertebralSurgery {
+			surgeryType
+			approach
+			additional
+			upper
+			lower
+		}
+		fixation_fusion
+		fixation {
+			device
+			approach
+			upper
+			lower
+		}
+		fusionBoneGraft
+		autograft {
+			type
+		}	
+		allograft {
+			type
+		}	
+		adjunctive
+		synthetics {
+			type
+		}	
+		intraoperativeMonitoring {
+			type
+		}	
+		navigation {
+			type
+		}
+		otherProcedure
+		cord {
+			type
+		}
+		pumps {
+			type
+		}	
+		drainage {
+			type
+		}
+  }
+}
+

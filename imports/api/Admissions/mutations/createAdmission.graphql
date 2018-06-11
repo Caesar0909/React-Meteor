@@ -1,0 +1,5 @@
+mutation createAdmission($admission: AdmissionInput!) {
+  createAdmission(admission: $admission) {
+    _id
+  }
+}

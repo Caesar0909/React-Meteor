@@ -1,0 +1,11 @@
+query careplanSearchQuery($filter: String!) {
+  careplansFiltered(filter: $filter) {
+    _id
+    isActive
+    patientId
+    patient {
+      firstName
+      lastName
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mutation createPhysician24MonthFollowUp($physician24MonthFollowUp: Physician24MonthFollowUpInput!) {
+  createPhysician24MonthFollowUp(physician24MonthFollowUp: $physician24MonthFollowUp) {
+    _id
+  }
+}

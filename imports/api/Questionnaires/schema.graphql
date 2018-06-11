@@ -1,0 +1,76 @@
+enum QuestionnaireType {
+  physician
+  patient
+}
+
+enum QuestionnaireStatus {
+  Planned
+  In_progress
+  Completed
+  Not_started
+}
+
+type QuestionnaireHistory {
+  updateby: String
+  date: Date
+}
+
+type InitialClinicalInfo {
+  PP1: String
+  spineUpperClinical: String
+  spineLowerClinical: String
+  CA3: Boolean
+  treatmentType: String
+}
+
+type Questionnaire {
+  _id: ID
+  type: String
+  careplanId: String
+  careplan: Careplan
+  formId: String
+  owner: String
+  assignedTo: String
+  patientId: String
+  patient: Patient
+  dueDate: Date
+  name: String
+  status: QuestionnaireStatus
+  history: [QuestionnaireHistory]
+  isActive: Boolean
+  createdAt: Date!
+  initialInfo: InitialClinicalInfo
+}
+
+extend type Query {
+  questionnaires(filter: String): [Questionnaire]
+  questionnaire(_id: ID): Questionnaire
+  questionnairesDueToday: [Questionnaire]
+  questionnairesOverDue: [Questionnaire]
+}
+
+extend type Mutation {
+  createQuestionnaire(questionnaire: QuestionnaireInput!): Questionnaire
+  updateQuestionnaire(questionnaire: QuestionnaireInput!): Questionnaire
+}
+
+input QuestionnaireHistoryInput {
+  updateby: String
+  date: Date
+}
+
+input QuestionnaireInput {
+  _id: ID
+  type: String!
+  careplanId: String!
+  formId: String
+  owner: String
+  assignedTo: String!
+  patientId: String
+  dueDate: Date
+  name: String
+  status: QuestionnaireStatus
+  history: [QuestionnaireHistoryInput]
+  isActive: Boolean!
+  createdAt: Date!
+}

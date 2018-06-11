@@ -1,0 +1,10 @@
+query Appointment($id: ID) {
+  appointment(_id: $id) {
+    _id
+    careplanId
+    patient {
+      _id
+    }
+    locationId
+  }
+}

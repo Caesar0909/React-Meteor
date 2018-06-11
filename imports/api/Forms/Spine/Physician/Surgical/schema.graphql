@@ -1,0 +1,171 @@
+type VertebralSurgery {
+  surgeryType: String
+  approach: [String]
+  additional: [String]
+  upper: String
+  lower: String
+}
+
+type Fixation {
+  device: [String]
+  approach: [String]
+  upper: String
+  lower: String
+}
+
+type Navigationtype {
+  type: String
+}
+
+type Monitoring {
+  type: [String]
+}
+
+type Imaging {
+  type: [String]
+}
+
+type Allograft {
+  type: [String]
+}
+
+type Autograft {
+  type: [String]
+}
+
+type Synthetics {
+  type: [String]
+}
+
+type Cord {
+  type: [String]
+}
+
+type Pumps {
+  type: [String]
+}
+
+type Drainage {
+  type: [String]
+}
+
+type PhysicianSurgical {
+  _id: ID
+  DateInitialReferral: Date
+  surg_proc_asascore: Int
+  surg_proc_surg_dt: Date
+  surg_proc_optimestart: Date
+  surg_proc_optimeend: Date
+  surg_proc_estimatedbloodloss: Int
+  surg_proc_injury_dt: Date
+  surg_proc_decomp_dt: Date
+  surg_proc_vertebral: String
+  vertebral: Boolean
+  vertebralSurgery: [VertebralSurgery]
+  fixation_fusion: Boolean
+  fixation: [Fixation]
+  fusionBoneGraft: Boolean
+  autograft: Autograft
+  allograft: Allograft
+  synthetics: Synthetics
+  adjunctive: Boolean
+  intraoperativeMonitoring: Monitoring
+  intraoperativeImaging: Imaging
+  navigation: Navigationtype
+  otherProcedure: Boolean
+  cord: Cord
+  pumps: Pumps
+  drainage: Drainage
+}
+
+extend type Query {
+  physicianSurgicals(filter: String): [PhysicianSurgical]
+  physicianSurgical(_id: ID): PhysicianSurgical
+}
+
+extend type Mutation {
+  createPhysicianSurgical(
+    physicianSurgical: PhysicianSurgicalInput!
+  ): PhysicianSurgical
+  deletePhysicianSurgical(_id: ID): Boolean
+}
+
+input VertebralSurgeryInput {
+  surgeryType: String
+  approach: String
+  additional: String
+  upper: String
+  lower: String
+}
+
+input FixationInput {
+  device: String
+  approach: String
+  upper: String
+  lower: String
+}
+
+input AutograftInput {
+  type: String
+}
+
+input AllograftInput {
+  type: String
+}
+
+input SyntheticsInput {
+  type: String
+}
+
+input MonitoringInput {
+  type: String
+}
+
+input ImagingInput {
+  type: String
+}
+
+input CordInput {
+  type: String
+}
+
+input PumpsInput {
+  type: String
+}
+
+input DrainageInput {
+  type: String
+}
+
+input NavigationInput {
+  type: String
+}
+
+input PhysicianSurgicalInput {
+  _id: ID
+  DateInitialReferral: Date
+  surg_proc_asascore: Int
+  surg_proc_surg_dt: Date
+  surg_proc_optimestart: Date
+  surg_proc_optimeend: Date
+  surg_proc_estimatedbloodloss: Int
+  surg_proc_injury_dt: Date
+  surg_proc_decomp_dt: Date
+  surg_proc_vertebral: String
+  vertebral: Boolean
+  vertebralSurgery: [VertebralSurgeryInput]
+  fixation_fusion: Boolean
+  fixation: [FixationInput]
+  fusionBoneGraft: Boolean
+  autograft: [AutograftInput]
+  allograft: [AllograftInput]
+  synthetics: [SyntheticsInput]
+  adjunctive: Boolean
+  intraoperativeMonitoring: [MonitoringInput]
+  intraoperativeImaging: [ImagingInput]
+  navigation: NavigationInput
+  otherProcedure: Boolean
+  cord: [CordInput]
+  pumps: [PumpsInput]
+  drainage: [DrainageInput]
+}

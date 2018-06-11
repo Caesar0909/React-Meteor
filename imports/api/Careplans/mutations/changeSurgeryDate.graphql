@@ -1,0 +1,5 @@
+mutation changeSurgeryDate($careplan: CareplanInput!) {
+  changeSurgeryDate(careplan: $careplan) {
+    _id
+  }
+}
